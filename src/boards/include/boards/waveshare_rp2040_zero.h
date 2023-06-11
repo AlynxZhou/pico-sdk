@@ -16,6 +16,11 @@
 // For board detection
 #define WAVESHARE_RP2040_ZERO
 
+// On some samples, the xosc can take longer to stabilize than is usual
+#ifndef PICO_XOSC_STARTUP_DELAY_MULTIPLIER
+#define PICO_XOSC_STARTUP_DELAY_MULTIPLIER 64
+#endif
+
 // --- UART ---
 #ifndef PICO_DEFAULT_UART
 #define PICO_DEFAULT_UART 0
